@@ -1,0 +1,50 @@
+# Introduction
+
+This vignette demonstrates the usage of the linear regression functions in the `myPackage2023` package.s
+
+# Fit a Linear Regression Model
+
+```{r}
+# Load the package
+library(myPackage2023)
+```
+
+# Simulate data
+
+```{r}
+mydata <- data.frame(y = rnorm(100), x1 = rnorm(100), x2 = rnorm(100))
+```
+
+# Fit a linear model
+
+```{r}
+fit <- myModel(y ~ x1 + x2, data = mydata)
+```
+
+# Model Summary
+
+```{r}
+summary <- myModel.Summary(fit)
+```
+
+```{r}
+```
+
+# Model Significance
+
+```{r}
+significance <- myModel.Significance(fit)
+```
+
+# Predict with the model
+
+```{r}
+newdata <- data.frame(x1 = rnorm(10), x2 = rnorm(10))
+predictions <- myModel.Predict(fit, newdata = newdata)
+```
+
+# Tidier Predictions
+
+```{r}
+tibble.Predict(predictions)
+```
